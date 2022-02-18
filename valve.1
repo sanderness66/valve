@@ -1,0 +1,49 @@
+.TH tube 1 03-JAN-2021 Go
+
+.SH NAME
+tube \- decode vacuum tube designations
+
+.SH SYNOPSIS
+.B tube
+[name ...]
+
+.SH DESCRIPTION
+.B tube
+will run through tube names given either on the command line or as
+stdin and attempt to decode any information that can be gleaned from
+it.
+
+.SH EXAMPLE
+.EX
+$ tube ecc83
+ECC83
+heater:         6.3V or 6.3/12.6V
+base:           B9A noval
+function:       1. Small-signal triode
+function:       2. Small-signal triode
+aliases:        B339 7025 12AX7 6057 M8137
+.EE
+
+.SH BUGS
+.B tube
+works best with European Philips/Mullard designations (like ECC83) or
+American R.E.T.M.A. designations for which
+.B tube
+knows a Philips/Mullard equivalent (like 12AX7). It can tell very
+little from R.E.T.M.A. names alone, and nothing at all from tube
+designations that don't follow either scheme.
+
+.B tube
+will sometimes mis-identify tubes that don't use either of the two
+naming schemes mentioned (for example the KT66, which looks like
+Philips/Mullard to
+.B tube
+but isn't).
+
+.B tube
+hasn't been hipped yet to some very obscure tube sockets
+(Philips/Mullard names that end in more than two digits) or to
+inverted names (like E83CC).
+
+.SH OWNER
+svm
