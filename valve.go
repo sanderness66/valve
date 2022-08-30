@@ -7,8 +7,8 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
+	"github.com/chzyer/readline"
 	"os"
 	"regexp"
 	"strconv"
@@ -206,10 +206,18 @@ func main() {
 			feed(arg)
 		}
 	} else {
-		scanner := bufio.NewScanner(os.Stdin)
-		for scanner.Scan() {
-			s := scanner.Text()
-			feed(s)
+		rl, err := readline.New(". ")
+		if err != nil {
+			panic(err)
+		}
+		defer rl.Close()
+
+		for {
+			line, err := rl.Readline()
+			if err != nil {
+				break
+			}
+			feed(line)
 		}
 	}
 }
