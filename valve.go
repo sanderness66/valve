@@ -206,7 +206,7 @@ func main() {
 			feed(arg)
 		}
 	} else {
-		rl, _ := readline.New(". ")
+		rl, _ := readline.New("")
 		for {
 			line, err := rl.Readline()
 			if err != nil { // err is set on EOF
