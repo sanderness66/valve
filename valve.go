@@ -1,6 +1,6 @@
 // TUBE -- decode tube designations from stdin or cmdline
 //
-// SvM 03-JAN-2021
+// SvM 03-JAN-2021 - 01-SEP-2022
 //
 // todo c: complete ph_bases[]
 
@@ -206,15 +206,10 @@ func main() {
 			feed(arg)
 		}
 	} else {
-		rl, err := readline.New(". ")
-		if err != nil {
-			panic(err)
-		}
-		defer rl.Close()
-
+		rl, _ := readline.New(". ")
 		for {
 			line, err := rl.Readline()
-			if err != nil {
+			if err != nil { // err is set on EOF
 				break
 			}
 			feed(line)

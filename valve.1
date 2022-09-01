@@ -1,4 +1,4 @@
-.TH valve 1 03-JAN-2021 "Kozmix Go"
+.TH valve 1 01-SEP-2022 "Kozmix Go"
 
 .SH NAME
 valve \- decode thermionic valve designations
@@ -11,7 +11,7 @@ valve \- decode thermionic valve designations
 .B valve
 will run through valve names given either on the command line or as
 stdin and attempt to decode any information that can be gleaned from
-it.
+them.
 
 .SH EXAMPLE
 .EX
@@ -22,6 +22,7 @@ base:           B9A noval
 function:       1. Small-signal triode
 function:       2. Small-signal triode
 aliases:        B339 7025 12AX7 6057 M8137
+
 .EE
 
 .SH BUGS
@@ -35,8 +36,8 @@ designations that don't follow either scheme.
 
 .B valve
 will sometimes mis-identify valves that don't use either of the two
-naming schemes mentioned (for example the KT66, which looks like
-Philips/Mullard to
+naming schemes mentioned (for example the KT66, which looks like a
+Philips/Mullard name to
 .B valve
 but isn't).
 
