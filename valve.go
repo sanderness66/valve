@@ -1,4 +1,4 @@
-// TUBE -- decode tube designations from stdin or cmdline
+// VALVE -- decode tube designations from stdin or cmdline
 //
 // SvM 03-JAN-2021 - 01-SEP-2022
 //
@@ -15,7 +15,7 @@ import (
 	"strings"
 )
 
-const maxdev = 5 // would be nice if it weren't hard-coded but I've never seen more than two
+const maxdev = 5 // would be nice if it weren't hard-coded but I've never seen more than three
 type tube struct {
 	heater  string
 	dev     [maxdev]string
