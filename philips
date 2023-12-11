@@ -1,0 +1,18 @@
+# https://en.wikipedia.org/wiki/Mullard%E2%80%93Philips_tube_designation
+
+
+bases:
+
+300-399 Octal
+400-499 Rimlok B8A
+500-529 Magnoval B9D; Novar
+600-699 Flat wire-ended
+700-799 Round wire-ended
+800-899 Noval B9A
+900-999 B7G
+
+1000- Round wire-ended; special nuvistor
+2000- Decal B10B
+3000- Octal
+5000- Magnoval B9D
+8000- Noval B9A
